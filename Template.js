@@ -27,6 +27,12 @@ class Template extends Transform {
     this.pieces = this.pieces.replace(toReplace, this.props[field]);
   }
 
+  _getPiecesWithClean() {
+    const toReturn = this.pieces;
+    this.pieces = '';
+    return toReturn;
+  }
+
   _transform(chunk, enc, callback) {
     this.pieces += chunk.toString();
     if (this._hasStart()) {
@@ -34,8 +40,11 @@ class Template extends Transform {
       while (this._hasBlock()) {
         this._compile();
       }
-      this.push(this.pieces);
+      this.push(this._getPiecesWithClean());
+      return callback();
     }
+    this.push(this._getPiecesWithClean());
+    return callback();
   }
 }
 
