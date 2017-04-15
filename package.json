@@ -1,6 +1,6 @@
 {
   "name": "stream-text-variable-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Very simple node stream variable replacer",
   "main": "Template.js",
   "scripts": {
