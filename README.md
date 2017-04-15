@@ -24,4 +24,9 @@ pipe(new Template({
 pipe(fs.createWriteStream(path.join(__dirname, './2.txt')));
 ```
 
+`2.txt`
+```
+Hi! Your name is Constantin T.!
+```
+
 That is it!
