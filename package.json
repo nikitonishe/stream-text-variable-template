@@ -1,0 +1,25 @@
+{
+  "name": "stream-text-variable-template",
+  "version": "1.0.0",
+  "description": "Very simple node stream variable replacer",
+  "main": "Template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ya-kostik/stream-text-variable-template.git"
+  },
+  "keywords": [
+    "stream",
+    "text",
+    "variables",
+    "template"
+  ],
+  "author": "Constantin T.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ya-kostik/stream-text-variable-template/issues"
+  },
+  "homepage": "https://github.com/ya-kostik/stream-text-variable-template#readme"
+}

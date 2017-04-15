@@ -12,7 +12,10 @@ Create template, for example `1.txt`
 Hi! Your name is {{firstname}} {{lastname}}!
 ```
 
+Use it as stream:
 ```javascript
+const Template = require('stream-text-variable-template');
+
 fs.createReadStream(path.join(__dirname, './1.txt')).
 pipe(new Template({
   firstname: 'Constantin',
