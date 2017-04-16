@@ -38,7 +38,11 @@ class Template extends Transform {
     if (this._hasStart()) {
       if (!this._hasBlock()) return callback();
       while (this._hasBlock()) {
-        this._compile();
+        try {
+          this._compile();
+        } catch(err) {
+          return callback(err);
+        }
       }
       this.push(this._getPiecesWithClean());
       return callback();
