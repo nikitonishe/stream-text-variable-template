@@ -21,9 +21,9 @@ class Template extends Transform {
   _compile() {
     const match = this.pieces.match(this.test.block);
     if (!match) throw new Error('Unstable variable');
-    const field = match[1];
+    const field = match[1].replace(/<.+?>/g, '');
     const toReplace = match[0];
-    if (!(this.props && this.props[field])) throw new Error('Variable ' + field + ' is not defined');
+    if (!(this.props && this.props[field])) this.props[field] = '';
     this.pieces = this.pieces.replace(toReplace, this.props[field]);
   }
 
